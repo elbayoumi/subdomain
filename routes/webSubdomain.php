@@ -19,8 +19,9 @@ use Illuminate\Support\Facades\Route;
 //     return "Welcome to the subdomain: $subdomain";
 // });
 Route::domain('{subdomain}.'.config('app.short_url'))->group(function () {
-    Route::get('/', function ($subdomain) {
-        dd($subdomain);
+    Route::get('/{id?}', function ($subdomain,$id=null) {
+        // dd($subdomain);
+        dd($id);
         return view('welcome');
     });
 });

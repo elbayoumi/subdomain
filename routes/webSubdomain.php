@@ -20,7 +20,7 @@ use Illuminate\Support\Facades\Route;
 // });
 Route::domain('{subdomain}.'.config('app.short_url'))->group(function () {
     Route::get('/{id?}', function ($subdomain,$id=null) {
-        // dd($subdomain);
+        print_r('sub domain '.':'.$subdomain);
         dd($id);
         return view('welcome');
     });

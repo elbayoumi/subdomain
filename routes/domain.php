@@ -18,12 +18,8 @@ use Illuminate\Support\Facades\Route;
 //     // Your logic for the main page of the subdomain
 //     return "Welcome to the subdomain: $subdomain";
 // });
-Route::domain('{subdomain}.'.config('app.short_url'))->group(function () {
-    Route::get('/{id?}', function ($subdomain,$id=null) {
-        print_r('sub domain '.':'.$subdomain);
-        dd($id);
-        return view('welcome');
-    });
+Route::get('/', function () {
+    // dd($id);
+    return 'domain';
 });
-
 

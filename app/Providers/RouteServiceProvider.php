@@ -36,6 +36,7 @@ class RouteServiceProvider extends ServiceProvider
                 ->group(base_path('routes/webSubdomain.php'));
             Route::middleware('web')
                 ->group(base_path('routes/web.php'));
+                Route::domain('coo.t')->group(base_path('routes/domain.php'));
         });
     }
 }
